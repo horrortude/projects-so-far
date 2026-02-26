@@ -1,14 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+  box-sizing: border-box;
+  border-collapse: collapse;
 
-<head>
-  <meta charset="utf-8">
-  <title>Book Inventory</title>
-  <link rel="stylesheet" href="fcc-certif">
-</head>
+}
 
-<body>
-  <h1>Book Inventory</h1>
-</body>
+th {
+  padding: 0.4rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-</html>
+tr[class="read"] {
+  background-image: linear-gradient(lightgreen, yellow 60px);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(lightpink, pink);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient( lightblue, skyblue)
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(orange, red);
+  text-align: center;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(lightgreen, green);
+  text-align: center;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(yellow, orange);
+  text-align: center;
+}
+
+span[class="status"], 
+span[class^="rate"] {
+  height: 1.7em;
+  width: 10vw;
+  padding: 1em;
+}
+
+span[class^="rate"] > span { 
+  height: 1.2em;
+  width: 1.2em;
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0.2rem
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(darkgreen);
+}
+
+span[class~="two"] span:nth-child(-n+2){
+  background-image: linear-gradient(green);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(green);
+}
+
+
+.status
+ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title, 
+.author,
+.category {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+
