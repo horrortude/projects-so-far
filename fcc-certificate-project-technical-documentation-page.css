@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body:not(#navbar) {
+    position: absolute;
+    left: 250px;
+}
+
+p:not(header) {
+    padding-left: 1.5rem
+}
+
+header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: .75rem;
+}
+
+#navbar {
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    border-right: solid;
+}
+
+#navbar a{
+    display: flex;
+    padding: 10px;
+    border: 2px solid grey;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 1rem;
+}
+
+
+blockquote {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+li {
+    padding: .5rem;
+    margin-left: 1rem;
+}
+
+section {
+    padding: 0.25rem;
+}
+
+@media (min-width: 20em) and (max-width: 80em) {
+    blockquote {
+        background-color: lightyellow;
+    }
+}
+
